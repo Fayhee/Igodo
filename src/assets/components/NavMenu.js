@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {FiHome} from 'react-icons/fi';
 import {AiOutlineUser} from 'react-icons/ai';
+import {BiFolder} from 'react-icons/bi';
 import {BiStore} from 'react-icons/bi';
 import colors from "../Colors";
 import {useLocation, useNavigate} from 'react-router-dom';
@@ -67,6 +68,13 @@ export default function NavMenu(){
                 nav('/product')
             }}>
             <AiOutlineUser />              
+            </Link>
+            <Link 
+            active = {pathname === "/item"}
+            onClick={() => {
+                nav('/item')
+            }}>
+            <BiFolder />              
             </Link>
         </NavMenuEl>
     );

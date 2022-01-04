@@ -3,6 +3,10 @@ import Colors from "./assets/Colors";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import NavMenu from "./assets/components/NavMenu";
 import HomePage from "./assets/components/HomePage";
+import StorePage from "./assets/components/StorePage";
+import ProductPage from "./assets/components/ProductPage";
+import CreateItem from "./assets/components/CreateItem";
+
 
 const AppEl = styled.div`
   display: flex;
@@ -28,9 +32,10 @@ function App() {
     <AppEl>
       <Pages>
       <Routes>
-      <Route exact path ="/store" element = {<div>Store</div>}/>
-      <Route exact path ="/product" element = {<div>Product</div>}/>
+      <Route exact path ="/store" element = {<StorePage/>}/> 
+      <Route exact path ="/product" element = {<ProductPage/>}/>
       <Route exact path ="/" element =  {<HomePage/>}/> 
+      <Route exact path ="/item" element =  {<CreateItem/>}/> 
       </Routes>
       </Pages>
       <NavMenu/>
